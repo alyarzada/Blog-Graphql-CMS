@@ -9,14 +9,14 @@ const Posts = () => {
 
   if (error)
     return (
-      <div className="px-50px mx-3 mt-4 bg-red-500 text-slate-50 w-fit py-1 px-3 rounded">
+      <div className="px-10px sm:px-50px mx-3 mt-4 bg-red-500 text-slate-50 w-fit py-1 px-3 rounded">
         Error: {error.message}
       </div>
     );
 
   return (
-    <div className="px-50px mt-4">
-      <div className="w-1/2 my-10 mx-auto text-center flex flex-col items-center gap-2">
+    <div className="px-10px md:px-50px mt-4">
+      <div className="w-full sm:w-90% lg:w-60% xl:w-1/2 my-10 mx-auto text-center flex flex-col items-center gap-1 md:gap-2">
         <h1>Blog Application with Hygraph CMS</h1>
         <p className="text-slate-5 mb-4">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga ipsam
