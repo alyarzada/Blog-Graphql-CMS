@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/GraphQL_Logo.svg";
 
 const Navbar = () => {
   return (
-    <header className="py-3 px-50px shadow-lg shadow-pink-500/50">
+    <header className="py-3 px-50px">
       <nav className="flex justify-between items-center">
         <div className="w-50px">
-          <img className="w-full" src={logo} alt="" />
+          <Link to={"/"}>
+            <img className="w-full" src={logo} alt="" />
+          </Link>
         </div>
 
         <h3>I love Graphql</h3>

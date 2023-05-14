@@ -14,9 +14,23 @@ const EachPost = () => {
       </div>
     );
 
-  console.log(data);
+  return (
+    <div className="px-50px flex items-center justify-center mt-4">
+      <div className="w-60%">
+        <img
+          className="w-full rounded-xl"
+          src={data.post.coverPhoto.url}
+          alt=""
+        />
 
-  return <div className="px-50px mt-4">{slug}</div>;
+        <h2 className="mb-4">{data.post.title}</h2>
+        <p
+          className="list-none"
+          dangerouslySetInnerHTML={{ __html: data.post.content.html }}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default EachPost;

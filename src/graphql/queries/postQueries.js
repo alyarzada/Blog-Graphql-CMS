@@ -9,6 +9,7 @@ const GET_POSTS = gql`
       createdAt
       publishedAt
       updatedAt
+
       datePublished
       coverPhoto {
         url
@@ -24,8 +25,8 @@ const GET_POSTS = gql`
 `;
 
 const GET_POST = gql`
-  query getPost($slug: slug) {
-    post(slug: $slug) {
+  query getPost($slug: String!) {
+    post(where: { slug: $slug }) {
       id
       title
       slug
@@ -33,8 +34,17 @@ const GET_POST = gql`
       publishedAt
       updatedAt
       datePublished
+      content {
+        html
+      }
       coverPhoto {
         url
+      }
+      author {
+        username
+        avatar {
+          url
+        }
       }
     }
   }
